@@ -20,6 +20,7 @@ The output directory will contain a plot of the butterfly curves, a file contain
 Tip: 
 The spice file must include a .print V(Q1) V(Q2) statement, where Q1 and Q2 are the nodes that contain the stored value. 
 It would be best to ommit the .option post so fsdb files are not generated for each monte carlo simulation. 
+Set strobeperiod=.001 in the .tran statement. This will ensure that finesim plots enough datapoints to obtain an accurate simulation. 
 
 Additionally, if you're using the skywater130 technology, the spice files must be modified to use the correct directives for monte carlo simulation, since by default they are commented out. The MC_SWITCH parameter enables this. Plese refer to https://www.youtube.com/watch?v=fGxs2TnDgrU for how to do this, and https://github.com/ThomasJagielski/ic_tools_install/tree/main/july-2023-scripts for the script. 
 
