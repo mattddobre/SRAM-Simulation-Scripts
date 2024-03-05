@@ -1,12 +1,9 @@
-* bitcell simulation 
-* .lib "/gpfs/gibbs/pi/manohar/tech/SKY/130/skywater-pdk/libraries/sky130_fd_pr/latest/models/sky130.lib.spice" 
-.lib "/gpfs/gibbs/project/manohar/mdd42/sky130_fd_pr_copy/latest/models/sky130.lib.spice" ff 
+* bitcell simulation  
+.lib model_file (process_corner) 
 .global Vdd GND Q Q_
+* including subcircuit
 .include bitcell_array_1x1_sky130.sp
-*.option post
-*.finesim_output=tr0
 .param MC_SWITCH=1
-*.model smod VSWITCH(RON=0.1m, VON=0, ROFF=10MEG, VOFF=1.8)
 
 
 VDD Vdd GND 1.8
