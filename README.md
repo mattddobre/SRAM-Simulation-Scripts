@@ -6,6 +6,7 @@ The simulator used is finesim. The script uses the following libraries which sho
 - numpy
 - scipy
 - statsmodels
+
 To run the script, use the following command:
 python3 sim_bench_monte.py -s (spicefile) -T (total simulation time, no unit) -tq0 (start of sweep of node 1) -tqf (end of sweep of node 1) -tq_0 (start of sweep of node 2) -tq_f (end of sweep of node 2) -o output directory
 
