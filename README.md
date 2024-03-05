@@ -15,7 +15,11 @@ Note, only integer values are supported. Also, field in the spice file directory
 The command would look like the following for the given example: 
 python3 sim_bench_monte.py -s bitcell_sim -T 6 -tq0 1 -tqf 2 -tq_0 4 -tq_f 5 -o example_out
 
-The output directory will contain a plot of the butterfly curves, a file containings the statistics of the simulation, a Q-Q plot and histogram to display non-gaussian characteristics, and a plot with the snm value at each iteration of the simulation
+The output directory will contain a plot of the butterfly curves, a file containings the statistics of the simulation, a Q-Q plot and histogram to display non-gaussian characteristics, and a plot with the snm value at each iteration of the simulation. 
+
+Tip: 
+The spice file must include a .print V(Q1) V(Q2) statement, where Q1 and Q2 are the nodes that contain the stored value. 
+It would be best to ommit the .option post so fsdb files are not generated for each monte carlo simulation. 
 
 
 
