@@ -20,7 +20,7 @@ cli_args = parser.parse_args()
 # checking arguments
 
 
-if(path.isfile("{}.sp".format(cli_args.spiceFile1)) == True): 
+if(path.isfile("{}.sp".format(cli_args.spiceFile1)) == True or path.isfile("{}.spice".format(cli_args.spiceFile1)) == True): 
     subprocess.call("finesim {}.sp".format(cli_args.spiceFile1), shell=True)
 else:
     print("File Nonexistant")
