@@ -157,8 +157,9 @@ def calculate_snm(q1, q2, q_1, q_2):
     if(abs_min > 1/len(h)):
         h_snm = abs_min
     else: 
-        idx_min = local_minima_indices[np.argmin(min_h)]
-        m = idx_min[0]
+        mins = list(list(local_minima_indices)[0])
+        idx_min = mins[np.argmin(min_h)]
+        m = idx_min
         h_max_1 = max(h[0:m])
         h_max_2 = max(h[m:])
         h_snm = min(h_max_1, h_max_2)
