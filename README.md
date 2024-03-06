@@ -10,7 +10,7 @@ The simulator used is finesim. The script uses the following libraries which sho
 To run the script, use the following command:
 python3 sim_bench_monte.py -s (spicefile) -T (total simulation time, no unit) -tq0 (start of sweep of node 1) -tqf (end of sweep of node 1) -tq_0 (start of sweep of node 2) -tq_f (end of sweep of node 2) -o output directory
 
-Note, only integer values are supported. Also, field in the spice file directory should not contain the file extension. Only .sp or .spice extensions are supported 
+Note, only integer values are supported. Also, field in the spice file directory should not contain the file extension. Only .sp or .spice extensions are supported.
 
 The command would look like the following for the given example: 
 python3 sim_bench_monte.py -s bitcell_sim -T 6 -tq0 1 -tqf 2 -tq_0 4 -tq_f 5 -o example_out
