@@ -153,6 +153,7 @@ def calculate_snm(q1, q2, q_1, q_2):
     local_minima_indices = argrelextrema(np.array(h), np.less)
     min_h = h[local_minima_indices]
     abs_min = np.min(min_h)
+    # differentiate between write and read
     threshold = 1/100
     
     if(abs_min > threshold):
