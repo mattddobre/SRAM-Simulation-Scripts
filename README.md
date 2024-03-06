@@ -1,7 +1,6 @@
 The following scripts plot the read, write and hold margins of an sram bitcell after running a spice simulation. 
 The simulation performed is a slow transient solution to calculate the DC operating point at various voltages. 
-Voltage controlled resistors act as switches that allow each node to be swept in one simulation. An example simulation setup for the bitcell is given. 
-The simulator used is finesim. The script uses the following libraries which should be installed: 
+Voltage controlled resistors act as switches that allow each node to be swept in one simulation. An example simulation setup for the bitcell is given for finesim. The script uses the following libraries which should be installed: 
 - matplotlib
 - numpy
 - scipy
