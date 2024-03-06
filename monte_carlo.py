@@ -39,10 +39,6 @@ def snm(file, T, tq1, tq2, tq_1, tq_2, outdir):
     mean_snm = np.average(snm_list)
     min_snm = np.min(snm_list)
     max_snm = np.max(snm_list)
-    
-
-        #os.mkdir("simulation_results")
-    
 
     fig, ax = plt.subplots()
     ax.hist(snm_list, bins=15)
@@ -137,14 +133,6 @@ def calculate_snm(q1, q2, q_1, q_2):
     # snm smaller square that can fit in either lobe
     
     h = diff_between_func(qrot2, qrot1, q_rot2, q_rot1)
-    #h= diff_between_func(q1, q2, q_1, q_2)
-    #plt.plot(h)
-        
-    
-    
-    #plt.plot(qrot1, q_rot1)
-    #plt.plot(qrot2, q_rot2)
-
 
 
      #checking meta stable point, for now assume its between the middle quartiles
@@ -166,8 +154,6 @@ def calculate_snm(q1, q2, q_1, q_2):
         h_max_2 = max(h[m:])
         h_snm = min(h_max_1, h_max_2)
     
-
-    #plt.plot(h[0:idx_intersect])
     
     snm = h_snm / np.sqrt(2)
     
@@ -204,12 +190,6 @@ def diff_between_func(x1, x2, y1, y2):
     x_ = [x for x in new_x if x >= x_min and x <= x_max]
     y_1 = [interp_y1[i] for i in range(len(interp_y1)) if new_x[i] >= x_min and new_x[i] <= x_max]
     y_2 = [interp_y2[i] for i in range(len(interp_y2)) if new_x[i] >= x_min and new_x[i] <= x_max]
-    
-    #plt.plot(x_, y_1)
-    #plt.plot(x_, y_2)
-       
-
-
 
     h = abs(np.array(y_1)-np.array(y_2))
 
@@ -229,9 +209,6 @@ def plot_and_calculate(t, q, q_, T, tq1, tq2, tq_1, tq_2, num_it, outdir):
         num_points = len(t_)
         sub = num_points//T
         
-        
-            
-            
         #assume equal subdivisions: 
                 
         # q varying, q_ response value
@@ -247,7 +224,6 @@ def plot_and_calculate(t, q, q_, T, tq1, tq2, tq_1, tq_2, num_it, outdir):
         snm_list.append(snm)
 
         
-        #print(min(q_sweep), max(q_sweep))
         if not os.path.isdir(outdir): 
 
             subprocess.call("mkdir {}".format(outdir), shell=True)
